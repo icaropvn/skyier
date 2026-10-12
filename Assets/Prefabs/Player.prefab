@@ -4960,7 +4960,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!61 &7368929470318890425
 BoxCollider2D:
@@ -5105,6 +5105,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: f4698900-aed3-4158-9276-d9db62cfba12
     m_ActionName: 'Player/Jump[/Keyboard/space,/Keyboard/upArrow]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 7005cc4b-79f9-4759-a7ba-49dce1971d36
+    m_ActionName: 'Player/Pause[/Keyboard/escape]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -5125,6 +5129,7 @@ MonoBehaviour:
   rb: {fileID: 6371105083690424254}
   animator: {fileID: 5320249018741806481}
   smokeFX: {fileID: 7000191666744908389}
+  deathCounter: {fileID: 0}
   baseGravity: 2
   maxFallSpeed: 18
   fallSpeedMultiplier: 2
