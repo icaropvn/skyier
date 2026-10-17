@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class MusicManager : MonoBehaviour
 {
-    private static MusicManager Instance;
+    public static MusicManager Instance { get; private set; }
     private AudioSource audioSource;
 
     [Header("Music")]
@@ -12,12 +12,15 @@ public class MusicManager : MonoBehaviour
     public AudioClip level2Music;
     public AudioClip level3Music;
 
+    private const float MUSIC_VOLUME = 0.1f;
+
     private void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
             audioSource = GetComponent<AudioSource>();
+            audioSource.mute = PlayerPrefs.GetInt("MusicEnabled", 1) == 0;
 
             DontDestroyOnLoad(gameObject);
 
@@ -31,7 +34,9 @@ public class MusicManager : MonoBehaviour
 
     private void Start()
     {
-        audioSource.volume = 0.025f;
+        var musicVolume = PlayerPrefs.GetFloat("MusicVolume", 1f);
+        SetMusicVolume(musicVolume);
+
         audioSource.loop = true;
 
         ChangeMusicForScene(SceneManager.GetActiveScene().name);
@@ -88,5 +93,19 @@ public class MusicManager : MonoBehaviour
         {
             SceneManager.sceneLoaded -= OnSceneLoaded;
         }
+    }
+
+    public void ToggleMusic(bool enabled)
+    {
+        audioSource.mute = !enabled;
+
+        PlayerPrefs.SetInt("MusicEnabled", enabled ? 1 : 0);
+        PlayerPrefs.Save();
+    }
+
+    public void SetMusicVolume(float volume)
+    {
+        audioSource.volume = MUSIC_VOLUME * volume;
+        PlayerPrefs.SetFloat("MusicVolume", volume);
     }
 }

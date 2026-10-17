@@ -1,11 +1,14 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class StartMenuController : MonoBehaviour
 {
+    public TextMeshProUGUI versionLabel;
+
     void Start()
     {
-        
+        SetVersionLabel();
     }
 
     public void OnStartClick()
@@ -25,5 +28,10 @@ public class StartMenuController : MonoBehaviour
         #endif
 
         Application.Quit();
+    }
+
+    public void SetVersionLabel()
+    {
+        versionLabel.text = "v" + Application.version;
     }
 }

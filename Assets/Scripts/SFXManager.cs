@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class SFXManager : MonoBehaviour
 {
-    public static SFXManager Instance;
+    public static SFXManager Instance { get; private set; }
 
     private AudioSource audioSource;
 
@@ -13,7 +13,7 @@ public class SFXManager : MonoBehaviour
     public AudioClip upgradeSound;
     public AudioClip doorSound;
 
-    private const float SFX_VOLUME = 0.2f;
+    private const float SFX_VOLUME = 0.5f;
 
     private void Awake()
     {
@@ -21,6 +21,8 @@ public class SFXManager : MonoBehaviour
         {
             Instance = this;
             audioSource = GetComponent<AudioSource>();
+            audioSource.mute = PlayerPrefs.GetInt("SoundFXEnabled", 1) == 0;
+
             DontDestroyOnLoad(gameObject);
         }
         else
@@ -33,7 +35,26 @@ public class SFXManager : MonoBehaviour
     {
         if (clip != null)
         {
-            audioSource.PlayOneShot(clip, SFX_VOLUME);
+            audioSource.PlayOneShot(clip, GetSoundFXVolume());
         }
+    }
+
+    public void ToggleSoundFX(bool enabled)
+    {
+        audioSource.mute = !enabled;
+
+        PlayerPrefs.SetInt("SoundFXEnabled", enabled ? 1 : 0);
+        PlayerPrefs.Save();
+    }
+
+    private float GetSoundFXVolume()
+    {
+        return PlayerPrefs.GetFloat("SoundFXVolume", 1f);
+    }
+
+    public void SetSoundFXVolume(float volume)
+    {
+        audioSource.volume = SFX_VOLUME * volume;
+        PlayerPrefs.SetFloat("MusicVolume", volume);
     }
 }
