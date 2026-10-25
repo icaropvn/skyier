@@ -23,16 +23,14 @@ public class LevelSelect : MonoBehaviour
 
             levelButtons[i].interactable = unlocked;
             lockIcons[i].SetActive(!unlocked);
-
-            levelTexts[i].color = unlocked
-                ? enabledTextColor
-                : disabledTextColor;
+            levelTexts[i].gameObject.SetActive(unlocked);
         }
     }
 
     public void LoadLevel(int level)
     {
         SceneManager.LoadScene("Level0" + level);
+        Cursor.visible = false;
     }
 
     public void Back()

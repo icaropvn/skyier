@@ -96,6 +96,9 @@ public class PlayerMovement : MonoBehaviour
 
     public void Jump(InputAction.CallbackContext context)
     {
+        if (Time.timeScale == 0f)
+            return;
+
         if (context.performed && jumpsRemaining > 0)
         {
             bool jumpedFromGround = isGrounded;

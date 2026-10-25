@@ -315,6 +315,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5874484353609624578, guid: 7a56b757e75501741813ce19e38813a6, type: 3}
   m_PrefabInstance: {fileID: 1116393090109069766}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1416245910 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3922536893512027935, guid: 7a56b757e75501741813ce19e38813a6, type: 3}
+  m_PrefabInstance: {fileID: 1116393090109069766}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!4 &2108905594 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2714229226313064859, guid: c301fb2534767674ab2a6262e382a35c, type: 3}
@@ -332,14 +343,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1142945809}
-    - target: {fileID: 3851337620956057392, guid: 7a56b757e75501741813ce19e38813a6, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -85
-      objectReference: {fileID: 0}
-    - target: {fileID: 3851337620956057392, guid: 7a56b757e75501741813ce19e38813a6, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -230
-      objectReference: {fileID: 0}
     - target: {fileID: 3922536893512027935, guid: 7a56b757e75501741813ce19e38813a6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -456,6 +459,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 936066175177494491, guid: fa96ef27e96e5be4f8b3017d16f04647, type: 3}
+      propertyPath: m_FirstSelected
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5677576879185757802, guid: fa96ef27e96e5be4f8b3017d16f04647, type: 3}
+      propertyPath: m_SendPointerHoverToParent
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5677576879185757802, guid: fa96ef27e96e5be4f8b3017d16f04647, type: 3}
+      propertyPath: m_DeselectOnBackgroundClick
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7017475413644403509, guid: fa96ef27e96e5be4f8b3017d16f04647, type: 3}
       propertyPath: m_Name
       value: EventSystem
@@ -503,8 +518,41 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7017475413644403509, guid: fa96ef27e96e5be4f8b3017d16f04647, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1230115269607508479}
   m_SourcePrefab: {fileID: 100100000, guid: fa96ef27e96e5be4f8b3017d16f04647, type: 3}
+--- !u!1 &1230115269607508477 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7017475413644403509, guid: fa96ef27e96e5be4f8b3017d16f04647, type: 3}
+  m_PrefabInstance: {fileID: 1230115269607508476}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1230115269607508478 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5677576879185757802, guid: fa96ef27e96e5be4f8b3017d16f04647, type: 3}
+  m_PrefabInstance: {fileID: 1230115269607508476}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1230115269607508477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01614664b831546d2ae94a42149d80ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.UI.InputSystemUIInputModule
+--- !u!114 &1230115269607508479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1230115269607508477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71cb2419ff642ba489548d2a39d0373f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MenuCursorController
+  uiInputModule: {fileID: 1230115269607508478}
+  mouseMovementThreshold: 2
 --- !u!1001 &6000046995684495955
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -47216,6 +47264,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5815077401994052184, guid: 84cbb9ed3c693974dac76a9756c6d354, type: 3}
+      propertyPath: firstButton
+      value: 
+      objectReference: {fileID: 1416245910}
     - target: {fileID: 5815077401994052184, guid: 84cbb9ed3c693974dac76a9756c6d354, type: 3}
       propertyPath: pauseMenuUI
       value: 

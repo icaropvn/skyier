@@ -12,6 +12,8 @@ public class SFXManager : MonoBehaviour
     public AudioClip checkpointSound;
     public AudioClip upgradeSound;
     public AudioClip doorSound;
+    public AudioClip menuNavigationSound;
+    public AudioClip menuConfirmSound;
 
     private const float SFX_VOLUME = 0.5f;
 
@@ -22,6 +24,7 @@ public class SFXManager : MonoBehaviour
             Instance = this;
             audioSource = GetComponent<AudioSource>();
             audioSource.mute = PlayerPrefs.GetInt("SoundFXEnabled", 1) == 0;
+            audioSource.volume = SFX_VOLUME * PlayerPrefs.GetFloat("SoundFXVolume", 1f);
 
             DontDestroyOnLoad(gameObject);
         }
@@ -35,7 +38,7 @@ public class SFXManager : MonoBehaviour
     {
         if (clip != null)
         {
-            audioSource.PlayOneShot(clip, GetSoundFXVolume());
+            audioSource.PlayOneShot(clip);
         }
     }
 
@@ -47,14 +50,9 @@ public class SFXManager : MonoBehaviour
         PlayerPrefs.Save();
     }
 
-    private float GetSoundFXVolume()
-    {
-        return PlayerPrefs.GetFloat("SoundFXVolume", 1f);
-    }
-
     public void SetSoundFXVolume(float volume)
     {
         audioSource.volume = SFX_VOLUME * volume;
-        PlayerPrefs.SetFloat("MusicVolume", volume);
+        PlayerPrefs.SetFloat("SoundFXVolume", volume);
     }
 }

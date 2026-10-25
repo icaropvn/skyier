@@ -22,13 +22,8 @@ public class SettingsMenu : MonoBehaviour
     public Image soundFXSliderHandle;
 
     [Header("Reset Progress")]
-    public GameObject resetProgressDescription;
     public GameObject resetProgressButton;
-    public GameObject resetProgressMessage;
-
-    public float messageDuration = 3f;
-
-    private Coroutine messageCoroutine;
+    [SerializeField] private MessageModalController resetSuccessMessageModalController;
 
     void Start()
     {
@@ -37,16 +32,13 @@ public class SettingsMenu : MonoBehaviour
         StartSoundFXSettings();
 
         // reset progress
-        resetProgressDescription.SetActive(false);
         resetProgressButton.SetActive(false);
-        resetProgressMessage.SetActive(false);
     }
 
     public void ShowResetProgress()
     {
         HideAll();
 
-        resetProgressDescription.SetActive(true);
         resetProgressButton.SetActive(true);
     }
 
@@ -75,7 +67,6 @@ public class SettingsMenu : MonoBehaviour
         soundFXVolumeLabel.gameObject.SetActive(false);
 
         // reset progress
-        resetProgressDescription.SetActive(false);
         resetProgressButton.SetActive(false);
     }
 
@@ -88,24 +79,7 @@ public class SettingsMenu : MonoBehaviour
 
         PlayerPrefs.Save();
 
-        ShowResetMessage();
-    }
-
-    private void ShowResetMessage()
-    {
-        if (messageCoroutine != null)
-        {
-            StopCoroutine(messageCoroutine);
-        }
-
-        messageCoroutine = StartCoroutine(ResetMessageCoroutine());
-    }
-
-    private IEnumerator ResetMessageCoroutine()
-    {
-        resetProgressMessage.SetActive(true);
-        yield return new WaitForSeconds(messageDuration);
-        resetProgressMessage.SetActive(false);
+        resetSuccessMessageModalController.Open();
     }
 
     public void Back()
@@ -122,6 +96,7 @@ public class SettingsMenu : MonoBehaviour
 
         MusicManager.Instance.ToggleMusic(enabled);
         musicVolumeSlider.interactable = enabled;
+        UpdateMusicCheckboxNavigation();
 
         ColorUtility.TryParseHtmlString("#FFFFFF", out enabledColor);
         ColorUtility.TryParseHtmlString("#333333", out disabledColor);
@@ -146,6 +121,7 @@ public class SettingsMenu : MonoBehaviour
 
         SFXManager.Instance.ToggleSoundFX(enabled);
         soundFXVolumeSlider.interactable = enabled;
+        UpdateSoundFXCheckboxNavigation();
 
         ColorUtility.TryParseHtmlString("#FFFFFF", out enabledColor);
         ColorUtility.TryParseHtmlString("#333333", out disabledColor);
@@ -207,5 +183,32 @@ public class SettingsMenu : MonoBehaviour
     {
         SFXManager.Instance.SetSoundFXVolume(value);
         soundFXVolumeLabel.text = Mathf.RoundToInt(value * 100) + "%";
+    }
+
+    
+    private void UpdateMusicCheckboxNavigation()
+    {
+        bool enabled = musicVolumeSlider.IsInteractable();
+
+        var musicNav = musicCheckbox.navigation;
+        musicNav.mode = Navigation.Mode.Explicit;
+        musicNav.selectOnRight = enabled
+            ? musicVolumeSlider
+            : null;
+
+        musicCheckbox.navigation = musicNav;
+    }
+
+    private void UpdateSoundFXCheckboxNavigation()
+    {
+        bool enabled = soundFXVolumeSlider.IsInteractable();
+
+        var soundNav = soundFXCheckbox.navigation;
+        soundNav.mode = Navigation.Mode.Explicit;
+        soundNav.selectOnRight = enabled
+            ? soundFXVolumeSlider
+            : null;
+
+        soundFXCheckbox.navigation = soundNav;
     }
 }

@@ -1,10 +1,13 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseMenuUI;
+    public Button firstButton;
 
     private bool isPaused = false;
 
@@ -26,17 +29,27 @@ public class PauseMenu : MonoBehaviour
 
     public void Pause()
     {
+        Cursor.visible = true;
+
         isPaused = true;
         pauseMenuUI.SetActive(true);
 
         Time.timeScale = 0f;
+
+        if (EventSystem.current.currentSelectedGameObject != firstButton.gameObject)
+        {
+            EventSystem.current.SetSelectedGameObject(firstButton.gameObject);
+        }
     }
 
     public void Resume()
     {
         isPaused = false;
-        pauseMenuUI.SetActive(false);
 
+        EventSystem.current.SetSelectedGameObject(null);
+
+        Cursor.visible = false;
+        pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
     }
 

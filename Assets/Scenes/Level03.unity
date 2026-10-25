@@ -116272,6 +116272,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a56b757e75501741813ce19e38813a6, type: 3}
+--- !u!114 &916382582 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3922536893512027935, guid: 7a56b757e75501741813ce19e38813a6, type: 3}
+  m_PrefabInstance: {fileID: 916382581}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!1 &1107940460 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5874484353609624578, guid: 7a56b757e75501741813ce19e38813a6, type: 3}
@@ -116285,6 +116296,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5677576879185757802, guid: fa96ef27e96e5be4f8b3017d16f04647, type: 3}
+      propertyPath: m_SendPointerHoverToParent
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5677576879185757802, guid: fa96ef27e96e5be4f8b3017d16f04647, type: 3}
+      propertyPath: m_DeselectOnBackgroundClick
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7017475413644403509, guid: fa96ef27e96e5be4f8b3017d16f04647, type: 3}
       propertyPath: m_Name
       value: EventSystem
@@ -116332,8 +116351,41 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7017475413644403509, guid: fa96ef27e96e5be4f8b3017d16f04647, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1291670950}
   m_SourcePrefab: {fileID: 100100000, guid: fa96ef27e96e5be4f8b3017d16f04647, type: 3}
+--- !u!1 &1291670948 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7017475413644403509, guid: fa96ef27e96e5be4f8b3017d16f04647, type: 3}
+  m_PrefabInstance: {fileID: 1291670947}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1291670949 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5677576879185757802, guid: fa96ef27e96e5be4f8b3017d16f04647, type: 3}
+  m_PrefabInstance: {fileID: 1291670947}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1291670948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01614664b831546d2ae94a42149d80ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.UI.InputSystemUIInputModule
+--- !u!114 &1291670950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1291670948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71cb2419ff642ba489548d2a39d0373f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MenuCursorController
+  uiInputModule: {fileID: 1291670949}
+  mouseMovementThreshold: 2
 --- !u!1001 &1448504740
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -116386,6 +116438,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5815077401994052184, guid: 84cbb9ed3c693974dac76a9756c6d354, type: 3}
+      propertyPath: firstButton
+      value: 
+      objectReference: {fileID: 916382582}
     - target: {fileID: 5815077401994052184, guid: 84cbb9ed3c693974dac76a9756c6d354, type: 3}
       propertyPath: pauseMenuUI
       value: 
@@ -116591,9 +116647,9 @@ SceneRoots:
   m_Roots:
   - {fileID: 206677402}
   - {fileID: 690170581}
-  - {fileID: 1448504740}
   - {fileID: 2085673276}
   - {fileID: 418261822}
   - {fileID: 1291670947}
   - {fileID: 916382581}
+  - {fileID: 1448504740}
   - {fileID: 1598067832}
