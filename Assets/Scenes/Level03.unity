@@ -116144,6 +116144,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1928842879203253108, guid: 7a56b757e75501741813ce19e38813a6, type: 3}
+      propertyPath: m_SpriteState.m_HighlightedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 9afa385cd215ee8498e503a3de5f320c, type: 3}
+    - target: {fileID: 1928842879203253108, guid: 7a56b757e75501741813ce19e38813a6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1448504741}
@@ -116164,6 +116168,10 @@ PrefabInstance:
       value: -230
       objectReference: {fileID: 0}
     - target: {fileID: 3922536893512027935, guid: 7a56b757e75501741813ce19e38813a6, type: 3}
+      propertyPath: m_SpriteState.m_HighlightedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 9afa385cd215ee8498e503a3de5f320c, type: 3}
+    - target: {fileID: 3922536893512027935, guid: 7a56b757e75501741813ce19e38813a6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1448504741}
@@ -116179,6 +116187,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6538565933057437398, guid: 7a56b757e75501741813ce19e38813a6, type: 3}
+      propertyPath: m_SpriteState.m_HighlightedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 9afa385cd215ee8498e503a3de5f320c, type: 3}
     - target: {fileID: 6538565933057437398, guid: 7a56b757e75501741813ce19e38813a6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -116648,8 +116660,8 @@ SceneRoots:
   - {fileID: 206677402}
   - {fileID: 690170581}
   - {fileID: 2085673276}
-  - {fileID: 418261822}
-  - {fileID: 1291670947}
   - {fileID: 916382581}
   - {fileID: 1448504740}
+  - {fileID: 418261822}
+  - {fileID: 1291670947}
   - {fileID: 1598067832}

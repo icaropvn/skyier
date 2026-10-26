@@ -1037,7 +1037,7 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 21300000, guid: 87318c1a3389a164ea169f885c4ab94b, type: 3}
+    m_HighlightedSprite: {fileID: 21300000, guid: 9afa385cd215ee8498e503a3de5f320c, type: 3}
     m_PressedSprite: {fileID: 21300000, guid: 87318c1a3389a164ea169f885c4ab94b, type: 3}
     m_SelectedSprite: {fileID: 21300000, guid: 87318c1a3389a164ea169f885c4ab94b, type: 3}
     m_DisabledSprite: {fileID: 21300000, guid: 87318c1a3389a164ea169f885c4ab94b, type: 3}
@@ -2254,7 +2254,7 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 21300000, guid: 87318c1a3389a164ea169f885c4ab94b, type: 3}
+    m_HighlightedSprite: {fileID: 21300000, guid: 9afa385cd215ee8498e503a3de5f320c, type: 3}
     m_PressedSprite: {fileID: 21300000, guid: 87318c1a3389a164ea169f885c4ab94b, type: 3}
     m_SelectedSprite: {fileID: 21300000, guid: 87318c1a3389a164ea169f885c4ab94b, type: 3}
     m_DisabledSprite: {fileID: 21300000, guid: 9afa385cd215ee8498e503a3de5f320c, type: 3}
@@ -3610,7 +3610,7 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 21300000, guid: 87318c1a3389a164ea169f885c4ab94b, type: 3}
+    m_HighlightedSprite: {fileID: 21300000, guid: 9afa385cd215ee8498e503a3de5f320c, type: 3}
     m_PressedSprite: {fileID: 21300000, guid: 87318c1a3389a164ea169f885c4ab94b, type: 3}
     m_SelectedSprite: {fileID: 21300000, guid: 87318c1a3389a164ea169f885c4ab94b, type: 3}
     m_DisabledSprite: {fileID: 21300000, guid: 9afa385cd215ee8498e503a3de5f320c, type: 3}
@@ -4259,7 +4259,7 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 21300000, guid: 87318c1a3389a164ea169f885c4ab94b, type: 3}
+    m_HighlightedSprite: {fileID: 21300000, guid: 9afa385cd215ee8498e503a3de5f320c, type: 3}
     m_PressedSprite: {fileID: 21300000, guid: 87318c1a3389a164ea169f885c4ab94b, type: 3}
     m_SelectedSprite: {fileID: 21300000, guid: 87318c1a3389a164ea169f885c4ab94b, type: 3}
     m_DisabledSprite: {fileID: 21300000, guid: 87318c1a3389a164ea169f885c4ab94b, type: 3}
@@ -4488,7 +4488,7 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 21300000, guid: 87318c1a3389a164ea169f885c4ab94b, type: 3}
+    m_HighlightedSprite: {fileID: 21300000, guid: 9afa385cd215ee8498e503a3de5f320c, type: 3}
     m_PressedSprite: {fileID: 21300000, guid: 87318c1a3389a164ea169f885c4ab94b, type: 3}
     m_SelectedSprite: {fileID: 21300000, guid: 87318c1a3389a164ea169f885c4ab94b, type: 3}
     m_DisabledSprite: {fileID: 21300000, guid: 9afa385cd215ee8498e503a3de5f320c, type: 3}
@@ -4999,7 +4999,7 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 21300000, guid: 87318c1a3389a164ea169f885c4ab94b, type: 3}
+    m_HighlightedSprite: {fileID: 21300000, guid: 9afa385cd215ee8498e503a3de5f320c, type: 3}
     m_PressedSprite: {fileID: 21300000, guid: 87318c1a3389a164ea169f885c4ab94b, type: 3}
     m_SelectedSprite: {fileID: 21300000, guid: 87318c1a3389a164ea169f885c4ab94b, type: 3}
     m_DisabledSprite: {fileID: 21300000, guid: 87318c1a3389a164ea169f885c4ab94b, type: 3}
@@ -5211,7 +5211,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1826666410
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5261,7 +5261,7 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 21300000, guid: 87318c1a3389a164ea169f885c4ab94b, type: 3}
+    m_HighlightedSprite: {fileID: 21300000, guid: 9afa385cd215ee8498e503a3de5f320c, type: 3}
     m_PressedSprite: {fileID: 21300000, guid: 87318c1a3389a164ea169f885c4ab94b, type: 3}
     m_SelectedSprite: {fileID: 21300000, guid: 87318c1a3389a164ea169f885c4ab94b, type: 3}
     m_DisabledSprite: {fileID: 21300000, guid: 9afa385cd215ee8498e503a3de5f320c, type: 3}
