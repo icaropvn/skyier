@@ -6,9 +6,7 @@ Inspired by *Gato Roboto* and *Celeste*, **SKYIER** is a 2D pixel-art platformer
 
 This project was my first hands-on experience with game development and the Unity Engine. I learned a lot throughout the process and finally got a better understanding of what it actually takes to develop a game. Despite its simplicity, I'm really happy with what I've created, and I hope to build on this experience to make even cooler things in the future!
 
-<div align="center">
-    <img alt="Latest Version" src="https://img.shields.io/badge/Latest_Version-v0.1.0-ffffff?style=for-the-badge&link=https%3A%2F%2Fgithub.com%2Ficaropvn%2Fskyier%2Freleases%2Ftag%2Fv0.1.0">
-</div>
+![SKYIER Latest Release](Readme%20Assets/skyier-readme-latest-release-banner.png)
 
 # Credits ❤️
 
@@ -21,8 +19,8 @@ This project was my first hands-on experience with game development and the Unit
 
 Download the latest version of **SKYIER**:
 
-- Windows: [**SKYIER v0.1.0 for Windows**](https://github.com/icaropvn/skyier/releases/tag/v0.1.0)
-- MacOS: *not available*
+- Windows: [**SKYIER v0.2.1 for Windows**](https://github.com/icaropvn/skyier/releases/tag/v0.2.1)
+- MacOS: [**SKYIER v0.2.1 for MacOS**](https://github.com/icaropvn/skyier/releases/tag/v0.2.1)
 - Linux: *not available*
 
 **How to play:**
